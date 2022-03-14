@@ -78,7 +78,12 @@ function App() {
             </div>
           </Link>
           <MenuItems />
-          <Button shape='round' size='large' style={styles.button}>
+          <Button
+            shape='round'
+            size='large'
+            style={styles.button}
+            onClick={() => window.open("https://app.movemywallet.com/", "_blank", "noreferrer")}
+          >
             Launch App
           </Button>
         </Header>
@@ -88,7 +93,7 @@ function App() {
             <Route path='/news' element={<News />} />
             <Route path='/support' element={<Support />} />
             <Route path='/' element={<Home />} />
-            <Route path="*" element={<Home />} />
+            <Route path='*' element={<Home />} />
           </Routes>
         </div>
       </Router>
