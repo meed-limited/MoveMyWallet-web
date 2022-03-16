@@ -1,11 +1,11 @@
-import { BrowserRouter as Router, Routes, Route, Navigate, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import MenuItems from "./components/MenuItems";
 import Home from "./components/pages/Home";
 import About from "./components/pages/About";
 import News from "./components/pages/News";
 import Support from "./components/pages/Support";
 import { Button, Layout } from "antd";
-import "antd/dist/antd.css";
+import "antd/dist/antd.min.css";
 import HOME_BG from "./assets/HOME_BG.jpg";
 import LepriconLogo_Black from "./assets/LepriconLogo_Black.svg";
 
@@ -74,11 +74,16 @@ function App() {
         <Header style={styles.header}>
           <Link to='/'>
             <div style={styles.logo}>
-              <img src={LepriconLogo_Black} />
+              <img src={LepriconLogo_Black} alt='Lepricon_Logo' />
             </div>
           </Link>
           <MenuItems />
-          <Button shape='round' size='large' style={styles.button}>
+          <Button
+            shape='round'
+            size='large'
+            style={styles.button}
+            onClick={() => window.open("https://app.movemywallet.com/", "_blank", "noreferrer")}
+          >
             Launch App
           </Button>
         </Header>
@@ -88,7 +93,7 @@ function App() {
             <Route path='/news' element={<News />} />
             <Route path='/support' element={<Support />} />
             <Route path='/' element={<Home />} />
-            <Route path="*" element={<Home />} />
+            <Route path='*' element={<Home />} />
           </Routes>
         </div>
       </Router>
