@@ -5,11 +5,17 @@ import About from "./components/pages/About";
 import News from "./components/pages/News";
 import Support from "./components/pages/Support";
 import { Button, Layout } from "antd";
+import { FacebookOutlined, LinkedinOutlined, TwitterOutlined } from "@ant-design/icons";
+import Text from "antd/lib/typography/Text";
 import "antd/dist/antd.min.css";
 import HOME_BG from "./assets/HOME_BG.jpg";
+//import footerBackground from "./assets/footerBackground.jpg";
+import MMW_Logo from "./assets/MMW_Logo.png";
 import LepriconLogo_Black from "./assets/LepriconLogo_Black.svg";
+import discord from "./assets/discord.png";
+import telegram from "./assets/telegram.png";
 
-const { Header } = Layout;
+const { Header, Footer } = Layout;
 
 const styles = {
   layout: {
@@ -48,10 +54,9 @@ const styles = {
     fontWeight: "600"
   },
   logo: {
-    margin: "30px 0 0 120px",
-    width: "150px",
-    height: "50px",
-    viewBox: "0 0 50 38"
+    display: "flex",
+    width: "20%",
+    margin: "40px 0 0 30px"
   },
   button: {
     fontWeight: "500",
@@ -64,6 +69,19 @@ const styles = {
     textAlign: "center",
     background: "black",
     color: "white"
+  },
+  footer: {
+    //backgroundImage: `url(${footerBackground})`,
+    // backgroundPosition: "center",
+    // backgroundSize: "cover",
+    // backgroundRepeat: "no-repeat",
+    //height: "100px",
+    width: "100%",
+    overflow: "auto",
+    position: "fixed",
+    width: "100%",
+    bottom: "0",
+    backgroundColor: "transparent"
   }
 };
 
@@ -74,9 +92,10 @@ function App() {
         <Header style={styles.header}>
           <Link to='/'>
             <div style={styles.logo}>
-              <img src={LepriconLogo_Black} alt='Lepricon_Logo' />
+              <img src={MMW_Logo} alt='MMW_Logo' />
             </div>
           </Link>
+
           <MenuItems />
           <Button
             shape='round'
@@ -97,6 +116,45 @@ function App() {
           </Routes>
         </div>
       </Router>
+
+      <Footer style={styles.footer}>
+        <Text style={{ display: "flex", color: "white", float: "left" }}>
+          Powered by |
+          <a href='https://lepricon.io/' target='_blank' rel='noopener noreferrer'>
+            <div style={{ width: "90px", paddingLeft: "10px" }}>
+              <img src={LepriconLogo_Black} alt='LepriconLogo_Black' />
+            </div>
+          </a>
+        </Text>
+        <Text style={{ display: "flex", color: "black", fontWeight: "500", float: "right" }}>
+          Community |
+          <a href='https://twitter.com/lepriconio' target='_blank' rel='noopener noreferrer'>
+            <div style={{ padding: "0 10px 0 15px" }}>
+              <TwitterOutlined style={{ color: "black" }} />
+            </div>
+          </a>
+          <a href='https://discord.gg/FPepmQhtKa' target='_blank' rel='noopener noreferrer'>
+            <div style={{ padding: "0 10px" }}>
+              <img src={discord} alt='discord' />
+            </div>
+          </a>
+          <a href='https://t.me/lepriconio' target='_blank' rel='noopener noreferrer'>
+            <div style={{ padding: "0 10px" }}>
+              <img src={telegram} alt='telegram' />
+            </div>
+          </a>
+          <a href='https://www.facebook.com/lepriconio' target='_blank' rel='noopener noreferrer'>
+            <div style={{ padding: "0 10px" }}>
+              <FacebookOutlined style={{ color: "black" }} />
+            </div>
+          </a>
+          <a href='https://sc.linkedin.com/company/lepricon-io' target='_blank' rel='noopener noreferrer'>
+            <div style={{ padding: "0 10px" }}>
+              <LinkedinOutlined style={{ color: "black" }} />
+            </div>
+          </a>
+        </Text>
+      </Footer>
     </Layout>
   );
 }
