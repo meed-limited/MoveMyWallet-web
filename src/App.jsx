@@ -133,7 +133,7 @@ function App() {
               <TwitterOutlined style={{ color: "black" }} />
             </div>
           </a>
-          <a href='https://discord.gg/FPepmQhtKa' target='_blank' rel='noopener noreferrer'>
+          <a href='http://discord.gg/lepricon' target='_blank' rel='noopener noreferrer'>
             <div style={{ padding: "0 10px" }}>
               <img src={discord} alt='discord' />
             </div>
