@@ -11,7 +11,7 @@ import "antd/dist/antd.min.css";
 import HOME_BG from "./assets/HOME_BG.jpg";
 //import footerBackground from "./assets/footerBackground.jpg";
 import MMW_Logo from "./assets/MMW_Logo.png";
-import LepriconLogo_Black from "./assets/LepriconLogo_Black.svg";
+import LepriconLogoWhite from "./assets/LepriconLogoWhite.png";
 import discord from "./assets/discord.png";
 import telegram from "./assets/telegram.png";
 
@@ -121,9 +121,9 @@ function App() {
         <Text style={{ display: "flex", color: "white", float: "left" }}>
           Powered by |
           <a href='https://lepricon.io/' target='_blank' rel='noopener noreferrer'>
-            <div style={{ width: "90px", paddingLeft: "10px" }}>
-              <img src={LepriconLogo_Black} alt='LepriconLogo_Black' />
-            </div>
+          <div style={{ paddingLeft: "10px" }}>
+            <img src={LepriconLogoWhite} alt='LepriconLogoWhite' width="90px" height="25px" />
+          </div>
           </a>
         </Text>
         <Text style={{ display: "flex", color: "black", fontWeight: "500", float: "right" }}>
