@@ -122,7 +122,7 @@ function App() {
           Powered by |
           <a href='https://lepricon.io/' target='_blank' rel='noopener noreferrer'>
           <div style={{ paddingLeft: "10px" }}>
-            <img src={LepriconLogoWhite} alt='LepriconLogoWhite' width="90px" height="25px" />
+            <img src={LepriconLogoWhite} alt='LepriconLogoWhite' width="80px" height="22px" />
           </div>
           </a>
         </Text>
