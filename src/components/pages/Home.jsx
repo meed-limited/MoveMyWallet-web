@@ -1,5 +1,5 @@
 import { Button } from "antd";
-import { Link } from "react-router-dom";
+import wallet from "../../assets/wallet.png";
 
 const Home = () => {
   const styles = {
@@ -16,29 +16,39 @@ const Home = () => {
     },
     leftText: {
       lineHeight: "120px",
-      fontSize: "120px",
-      fontWeight: "1000"
-    },
-    RightText: {
-      display: "flex",
-      flex: 1,
-      alignItems: "center",
-      fontStyle: "italic",
-      fontSize: "30px",
-      fontWeight: "350",
-      letterSpacing: "1px"
+      fontSize: "70px",
+      fontWeight: "500",
+      color: "white"
     },
     button: {
+      height: "60px",
       fontWeight: "600",
       letterSpacing: "1px",
-      fontSize: "20px",
-      height: "50px",
+      fontSize: "22px",
       border: "none",
-      margin: "40px 50px 0 0",
-      padding: "0 40px 0 40px",
+      marginBlock: "50px",
+      marginLeft: "20px",
+      padding: "0 50px 0 50px",
       textAlign: "center",
       background: "black",
       color: "white"
+    },
+    smallerText: {
+      fontStyle: "italic",
+      fontSize: "27px",
+      fontWeight: "350",
+      letterSpacing: "1px",
+      color: "white"
+    },
+    rightPane: {
+      display: "flex",
+      flexDirection: "column",
+      flex: 1,
+      alignItems: "center",
+      justifyContent: "center"
+    },
+    wallet: {
+      margin: "auto"
     }
   };
 
@@ -46,17 +56,22 @@ const Home = () => {
     <>
       <div style={styles.body}>
         <div style={styles.leftPane}>
-          <div style={styles.leftText}>
-            move<br></br> my<br></br> wallet.
-          </div>
-          <Link to='/About'>
+          <div style={styles.leftText}>Move My Wallet</div>
+          <a href='https://app.movemywallet.com/' target='_blank' rel='noopener noreferrer'>
             <Button shape='round' size='large' style={styles.button}>
-              Learn more
+              Launch App
             </Button>
-          </Link>
+          </a>
+          <div style={styles.smallerText}>
+            Transfer all the assets from one wallet to another easily.
+          </div>
         </div>
 
-        <div style={styles.RightText}>The simple solution to transfer multiple assets from one wallet to another.</div>
+        <div style={styles.rightPane}>
+          <div style={styles.wallet}>
+            <img src={wallet} alt='wallet' height='300px' width='300px' />
+          </div>
+        </div>
       </div>
     </>
   );

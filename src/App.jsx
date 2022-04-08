@@ -2,12 +2,11 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import ButtonItems from "./components/ButtonItems";
 import Home from "./components/pages/Home";
 import About from "./components/pages/About";
-import { Button, Layout } from "antd";
-import { FacebookOutlined, LinkedinOutlined, TwitterOutlined } from "@ant-design/icons";
+import { Layout } from "antd";
+import { FacebookOutlined, LinkedinOutlined, TwitterOutlined, GithubOutlined } from "@ant-design/icons";
 import Text from "antd/lib/typography/Text";
 import "antd/dist/antd.min.css";
 import HOME_BG from "./assets/HOME_BG.jpg";
-//import footerBackground from "./assets/footerBackground.jpg";
 import MMW_Logo from "./assets/MMW_Logo.png";
 import LepriconLogoWhite from "./assets/LepriconLogoWhite.png";
 import discord from "./assets/discord.png";
@@ -32,7 +31,9 @@ const styles = {
     fontFamily: "Sora, sans-serif",
     color: "white",
     marginTop: "130px",
-    padding: "10px"
+    padding: "10px",
+    marginBottom: "60px",
+    overflow: "auto"
   },
   header: {
     position: "fixed",
@@ -70,11 +71,6 @@ const styles = {
     color: "white"
   },
   footer: {
-    //backgroundImage: `url(${footerBackground})`,
-    // backgroundPosition: "center",
-    // backgroundSize: "cover",
-    // backgroundRepeat: "no-repeat",
-    //height: "100px",
     width: "100%",
     overflow: "auto",
     position: "fixed",
@@ -95,11 +91,11 @@ function App() {
             </div>
           </Link>
           <ButtonItems />
-          <a href='https://app.movemywallet.com/' target='_blank' rel='noopener noreferrer'>
+          {/* <a href='https://app.movemywallet.com/' target='_blank' rel='noopener noreferrer'>
             <Button shape='round' size='large' style={styles.button}>
               Launch App
             </Button>
-          </a>
+          </a> */}
         </Header>
         <div style={styles.content}>
           <Routes>
@@ -143,6 +139,11 @@ function App() {
             <a href='https://sc.linkedin.com/company/lepricon-io' target='_blank' rel='noopener noreferrer'>
               <div style={{ padding: "0 10px" }}>
                 <LinkedinOutlined style={{ color: "black" }} />
+              </div>
+            </a>
+            <a href='https://github.com/shamrockstudios/MoveMyWallet-app' target='_blank' rel='noopener noreferrer'>
+              <div style={{ padding: "0 10px" }}>
+                <GithubOutlined style={{ color: "black" }} />
               </div>
             </a>
           </Text>
