@@ -1,5 +1,7 @@
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import ButtonItems from "./components/ButtonItems";
 import Home from "./components/pages/Home";
+import About from "./components/pages/About";
 import { Button, Layout } from "antd";
 import { FacebookOutlined, LinkedinOutlined, TwitterOutlined } from "@ant-design/icons";
 import Text from "antd/lib/typography/Text";
@@ -53,10 +55,10 @@ const styles = {
   logo: {
     display: "flex",
     width: "20%",
-    margin: "40px 0 0 30px"
+    margin: "30px 0 0 30px"
   },
   button: {
-    fontWeight: "500",
+    fontWeight: "600",
     letterSpacing: "1px",
     fontSize: "20px",
     height: "50px",
@@ -85,63 +87,67 @@ const styles = {
 function App() {
   return (
     <Layout style={styles.layout}>
-      <Header style={styles.header}>
-        <div style={styles.logo}>
-          <img src={MMW_Logo} alt='MMW_Logo' />
+      <Router>
+        <Header style={styles.header}>
+          <Link to='/'>
+            <div style={styles.logo}>
+              <img src={MMW_Logo} alt='MMW_Logo' />
+            </div>
+          </Link>
+          <ButtonItems />
+          <a href='https://app.movemywallet.com/' target='_blank' rel='noopener noreferrer'>
+            <Button shape='round' size='large' style={styles.button}>
+              Launch App
+            </Button>
+          </a>
+        </Header>
+        <div style={styles.content}>
+          <Routes>
+            <Route exact path='/about' element={<About />} />
+            <Route path='/' element={<Home />} />
+            <Route path='*' element={<Home />} />
+          </Routes>
         </div>
 
-        <ButtonItems />
-        <Button
-          shape='round'
-          size='large'
-          style={styles.button}
-          onClick={() => window.open("https://app.movemywallet.com/", "_blank", "noreferrer")}
-        >
-          Launch App
-        </Button>
-      </Header>
-      <div style={styles.content}>
-        <Home />
-      </div>
-
-      <Footer style={styles.footer}>
-        <Text style={{ display: "flex", color: "white", float: "left" }}>
-          Powered by |
-          <a href='https://lepricon.io/' target='_blank' rel='noopener noreferrer'>
-            <div style={{ paddingLeft: "10px" }}>
-              <img src={LepriconLogoWhite} alt='LepriconLogoWhite' width='80px' height='22px' />
-            </div>
-          </a>
-        </Text>
-        <Text style={{ display: "flex", color: "black", fontWeight: "500", float: "right" }}>
-          Community |
-          <a href='https://twitter.com/lepriconio' target='_blank' rel='noopener noreferrer'>
-            <div style={{ padding: "0 10px 0 15px" }}>
-              <TwitterOutlined style={{ color: "black" }} />
-            </div>
-          </a>
-          <a href='http://discord.gg/lepricon' target='_blank' rel='noopener noreferrer'>
-            <div style={{ padding: "0 10px" }}>
-              <img src={discord} alt='discord' />
-            </div>
-          </a>
-          <a href='https://t.me/lepriconio' target='_blank' rel='noopener noreferrer'>
-            <div style={{ padding: "0 10px" }}>
-              <img src={telegram} alt='telegram' />
-            </div>
-          </a>
-          <a href='https://www.facebook.com/lepriconio' target='_blank' rel='noopener noreferrer'>
-            <div style={{ padding: "0 10px" }}>
-              <FacebookOutlined style={{ color: "black" }} />
-            </div>
-          </a>
-          <a href='https://sc.linkedin.com/company/lepricon-io' target='_blank' rel='noopener noreferrer'>
-            <div style={{ padding: "0 10px" }}>
-              <LinkedinOutlined style={{ color: "black" }} />
-            </div>
-          </a>
-        </Text>
-      </Footer>
+        <Footer style={styles.footer}>
+          <Text style={{ display: "flex", color: "white", float: "left" }}>
+            Powered by |
+            <a href='https://lepricon.io/' target='_blank' rel='noopener noreferrer'>
+              <div style={{ paddingLeft: "10px" }}>
+                <img src={LepriconLogoWhite} alt='LepriconLogoWhite' width='80px' height='22px' />
+              </div>
+            </a>
+          </Text>
+          <Text style={{ display: "flex", color: "black", fontWeight: "500", float: "right" }}>
+            Community |
+            <a href='https://twitter.com/lepriconio' target='_blank' rel='noopener noreferrer'>
+              <div style={{ padding: "0 10px 0 15px" }}>
+                <TwitterOutlined style={{ color: "black" }} />
+              </div>
+            </a>
+            <a href='http://discord.gg/lepricon' target='_blank' rel='noopener noreferrer'>
+              <div style={{ padding: "0 10px" }}>
+                <img src={discord} alt='discord' />
+              </div>
+            </a>
+            <a href='https://t.me/lepriconio' target='_blank' rel='noopener noreferrer'>
+              <div style={{ padding: "0 10px" }}>
+                <img src={telegram} alt='telegram' />
+              </div>
+            </a>
+            <a href='https://www.facebook.com/lepriconio' target='_blank' rel='noopener noreferrer'>
+              <div style={{ padding: "0 10px" }}>
+                <FacebookOutlined style={{ color: "black" }} />
+              </div>
+            </a>
+            <a href='https://sc.linkedin.com/company/lepricon-io' target='_blank' rel='noopener noreferrer'>
+              <div style={{ padding: "0 10px" }}>
+                <LinkedinOutlined style={{ color: "black" }} />
+              </div>
+            </a>
+          </Text>
+        </Footer>
+      </Router>
     </Layout>
   );
 }

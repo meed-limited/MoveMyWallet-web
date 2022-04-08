@@ -29,7 +29,7 @@ const Home = () => {
       letterSpacing: "1px"
     },
     button: {
-      fontWeight: "500",
+      fontWeight: "600",
       letterSpacing: "1px",
       fontSize: "20px",
       height: "50px",
@@ -38,7 +38,7 @@ const Home = () => {
       padding: "0 40px 0 40px",
       textAlign: "center",
       background: "black",
-      color: "white",
+      color: "white"
     }
   };
 
@@ -49,20 +49,14 @@ const Home = () => {
           <div style={styles.leftText}>
             move<br></br> my<br></br> wallet.
           </div>
-
-          <Button
-            shape='round'
-            size='large'
-            style={styles.button}
-            onClick={() => window.open("https://lepricon.gitbook.io/move-my-wallet/", "_blank", "noreferrer")}
-          >
-            Learn more
-          </Button>
+          <Link to='/About'>
+            <Button shape='round' size='large' style={styles.button}>
+              Learn more
+            </Button>
+          </Link>
         </div>
 
-        <div style={styles.RightText}>
-        The simple solution to transfer multiple assets from one wallet to another.
-        </div>
+        <div style={styles.RightText}>The simple solution to transfer multiple assets from one wallet to another.</div>
       </div>
     </>
   );

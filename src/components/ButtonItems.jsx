@@ -1,4 +1,5 @@
 import { Button } from "antd";
+import { Link } from "react-router-dom";
 
 const styles = {
   menu: {
@@ -19,37 +20,28 @@ const styles = {
     paddingInline: "25px",
     background: "#2b31e9",
     color: "white",
-    border: "none",
+    border: "none"
   }
 };
 
 function ButtonItems() {
   return (
     <div style={styles.menu}>
-      <Button
-        shape='round'
-        size='large'
-        style={styles.button}
-        onClick={() => window.open("https://lepricon.io/", "_blank", "noreferrer")}
-      >
-        About Lepricon
-      </Button>
-      <Button
-        shape='round'
-        size='large'
-        style={styles.button}
-        onClick={() => window.open("https://lepricon.gitbook.io/move-my-wallet/", "_blank", "noreferrer")}
-      >
-        Support
-      </Button>
-      <Button
-        shape='round'
-        size='large'
-        style={styles.button}
-        onClick={() => window.open("https://app.movemywallet.com/", "_blank", "noreferrer")}
-      >
-        Feedback
-      </Button>
+      <Link to='/About'>
+        <Button shape='round' size='large' style={styles.button}>
+          About
+        </Button>
+      </Link>
+      <a href='https://lepricon.gitbook.io/move-my-wallet/' target='_blank' rel='noopener noreferrer'>
+        <Button shape='round' size='large' style={styles.button}>
+          Support
+        </Button>
+      </a>
+      <a href='https://app.movemywallet.com/' target='_blank' rel='noopener noreferrer'>
+        <Button shape='round' size='large' style={styles.button}>
+          Feedback
+        </Button>
+      </a>
     </div>
   );
 }
