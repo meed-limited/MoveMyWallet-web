@@ -17,8 +17,8 @@ const styles = {
     marginTop: "15px",
     paddingTop: "7px",
     paddingInline: "25px",
-    background: "rgb(231 231 121)",
-    color: "black",
+    background: "#2b31e9",
+    color: "white",
     border: "none",
   }
 };
