@@ -1,9 +1,5 @@
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import MenuItems from "./components/MenuItems";
+import ButtonItems from "./components/ButtonItems";
 import Home from "./components/pages/Home";
-import About from "./components/pages/About";
-import News from "./components/pages/News";
-import Support from "./components/pages/Support";
 import { Button, Layout } from "antd";
 import { FacebookOutlined, LinkedinOutlined, TwitterOutlined } from "@ant-design/icons";
 import Text from "antd/lib/typography/Text";
@@ -14,6 +10,7 @@ import MMW_Logo from "./assets/MMW_Logo.png";
 import LepriconLogoWhite from "./assets/LepriconLogoWhite.png";
 import discord from "./assets/discord.png";
 import telegram from "./assets/telegram.png";
+import "./style.css";
 
 const { Header, Footer } = Layout;
 
@@ -88,42 +85,32 @@ const styles = {
 function App() {
   return (
     <Layout style={styles.layout}>
-      <Router>
-        <Header style={styles.header}>
-          <Link to='/'>
-            <div style={styles.logo}>
-              <img src={MMW_Logo} alt='MMW_Logo' />
-            </div>
-          </Link>
-
-          <MenuItems />
-          <Button
-            shape='round'
-            size='large'
-            style={styles.button}
-            onClick={() => window.open("https://app.movemywallet.com/", "_blank", "noreferrer")}
-          >
-            Launch App
-          </Button>
-        </Header>
-        <div style={styles.content}>
-          <Routes>
-            <Route path='/about' element={<About />} />
-            <Route path='/news' element={<News />} />
-            <Route path='/support' element={<Support />} />
-            <Route path='/' element={<Home />} />
-            <Route path='*' element={<Home />} />
-          </Routes>
+      <Header style={styles.header}>
+        <div style={styles.logo}>
+          <img src={MMW_Logo} alt='MMW_Logo' />
         </div>
-      </Router>
+
+        <ButtonItems />
+        <Button
+          shape='round'
+          size='large'
+          style={styles.button}
+          onClick={() => window.open("https://app.movemywallet.com/", "_blank", "noreferrer")}
+        >
+          Launch App
+        </Button>
+      </Header>
+      <div style={styles.content}>
+        <Home />
+      </div>
 
       <Footer style={styles.footer}>
         <Text style={{ display: "flex", color: "white", float: "left" }}>
           Powered by |
           <a href='https://lepricon.io/' target='_blank' rel='noopener noreferrer'>
-          <div style={{ paddingLeft: "10px" }}>
-            <img src={LepriconLogoWhite} alt='LepriconLogoWhite' width="80px" height="22px" />
-          </div>
+            <div style={{ paddingLeft: "10px" }}>
+              <img src={LepriconLogoWhite} alt='LepriconLogoWhite' width='80px' height='22px' />
+            </div>
           </a>
         </Text>
         <Text style={{ display: "flex", color: "black", fontWeight: "500", float: "right" }}>

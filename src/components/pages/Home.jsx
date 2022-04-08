@@ -38,7 +38,7 @@ const Home = () => {
       padding: "0 40px 0 40px",
       textAlign: "center",
       background: "black",
-      color: "white"
+      color: "white",
     }
   };
 
@@ -49,11 +49,15 @@ const Home = () => {
           <div style={styles.leftText}>
             move<br></br> my<br></br> wallet.
           </div>
-          <Link to='/about'>
-          <Button shape='round' size='large' style={styles.button}>
+
+          <Button
+            shape='round'
+            size='large'
+            style={styles.button}
+            onClick={() => window.open("https://lepricon.gitbook.io/move-my-wallet/", "_blank", "noreferrer")}
+          >
             Learn more
           </Button>
-          </Link>
         </div>
 
         <div style={styles.RightText}>
