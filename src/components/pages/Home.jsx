@@ -61,7 +61,7 @@ const Home = () => {
         </div>
 
         <div style={styles.RightText}>
-          an easy and simple solution to transfer all your assets from one address to another.
+        The simple solution to transfer multiple assets from one wallet to another.
         </div>
       </div>
     </>
