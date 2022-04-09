@@ -115,7 +115,6 @@ function App() {
             </a>
           </Text>
           <Text style={{ display: "flex", color: "black", fontWeight: "500", float: "right" }}>
-            Community |
             <a href='https://twitter.com/lepriconio' target='_blank' rel='noopener noreferrer'>
               <div style={{ padding: "0 10px 0 15px" }}>
                 <TwitterOutlined style={{ color: "black" }} />

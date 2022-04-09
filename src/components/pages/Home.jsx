@@ -25,12 +25,13 @@ const Home = () => {
       fontWeight: "600",
       letterSpacing: "1px",
       fontSize: "22px",
-      border: "none",
+      border: "solid yellow",
       marginBlock: "50px",
       marginLeft: "20px",
       padding: "0 50px 0 50px",
       textAlign: "center",
-      background: "black",
+      background: "#806100",
+      // background: "#474d5a", 
       color: "white"
     },
     smallerText: {
