@@ -5,8 +5,10 @@ const Home = () => {
   const styles = {
     body: {
       display: "inline-flex",
-      width: "80%",
-      padding: "10px",
+      width: "65%",
+      height: "60vh",
+      marginBlock: "auto",
+      alignItems: "center",
       justifyContent: "center",
       fontFamily: "Sora, sans-serif",
       color: "black"
@@ -25,13 +27,12 @@ const Home = () => {
       fontWeight: "600",
       letterSpacing: "1px",
       fontSize: "22px",
-      border: "solid yellow",
+      border: "none",
       marginBlock: "50px",
       marginLeft: "20px",
       padding: "0 50px 0 50px",
       textAlign: "center",
       background: "#806100",
-      // background: "#474d5a", 
       color: "white"
     },
     smallerText: {

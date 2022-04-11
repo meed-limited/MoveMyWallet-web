@@ -4,7 +4,7 @@ const styles = {
   content: {
     display: "flex",
     flexDirection: "column",
-    width: "50%",
+    width: "75%",
     height: "inherit",
     fontSize: "17px",
     color: "rgba(255, 255, 255,0.7)",
@@ -15,14 +15,14 @@ const styles = {
     background:
       "linear-gradient(315deg, rgba(69,75,205,0.8) 0%, rgba(159,161,198,0.3) 50%, rgba(223,223,228,0.4) 100%)",
     borderRadius: "20px",
-    padding: "40px"
+    padding: "30px 40px"
   },
   h2: {
     fontWeight: "600",
     color: "white"
   },
   text: {
-    fontSize: "14px"
+    fontSize: "16px"
   }
 };
 
@@ -62,9 +62,8 @@ const About = () => {
           MoveMyWallet is a tool built by the tech boffins at Lepricon, the play-and-earn blockchain games company.
           We’ve had to pack up a few digital assets ourselves developing technology to use in our games and MoveMyWallet
           is a cool tool that came out of that research.
-          <br></br>
-          <div style={{ padding: "40px", textAlign: "center" }}>
-            <img src={LepriconLogoWhite} alt='LepriconLogoWhite' height='70px' />
+          <div style={{ padding: "30px", textAlign: "center" }}>
+            <img src={LepriconLogoWhite} alt='LepriconLogoWhite' height='50px' />
           </div>
           <div style={{ fontSize: "14px" }}>
             <i>* Please note - the above examples are for humorous purposes only</i>
