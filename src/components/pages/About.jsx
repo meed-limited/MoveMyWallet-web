@@ -53,10 +53,8 @@ const About = () => {
           It’s great for moving multiple NFTs from one wallet to another in just a few clicks.
         </div>
       </div>
-      <br></br>
-      <br></br>
 
-      <div style={styles.pane}>
+      <div style={{...styles.pane, marginTop: "40px"}}>
         <h2 style={styles.h2}>Built by Lepricon</h2>
         <div style={styles.text}>
           MoveMyWallet is a tool built by the tech boffins at Lepricon, the play-and-earn blockchain games company.
