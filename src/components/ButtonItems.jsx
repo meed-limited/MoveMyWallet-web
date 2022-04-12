@@ -34,12 +34,12 @@ function ButtonItems() {
       </Link>
       <a href='https://lepricon.gitbook.io/move-my-wallet/' target='_blank' rel='noopener noreferrer'>
         <Button shape='round' size='large' style={styles.button}>
-          Support
+          Docs/FAQ
         </Button>
       </a>
-      <a href='https://app.movemywallet.com/' target='_blank' rel='noopener noreferrer'>
+      <a href='https://techdev2021.atlassian.net/servicedesk/customer/portal/3' target='_blank' rel='noopener noreferrer'>
         <Button shape='round' size='large' style={styles.button}>
-          Feedback
+          Support
         </Button>
       </a>
     </div>
