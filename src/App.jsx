@@ -7,7 +7,6 @@ import { FacebookOutlined, LinkedinOutlined, TwitterOutlined, GithubOutlined } f
 import Text from "antd/lib/typography/Text";
 import "antd/dist/antd.min.css";
 import HOME_BG from "./assets/HOME_BG.jpg";
-import MMW_Logo from "./assets/MMW_Logo.png";
 import newLogo from "./assets/newLogo.png";
 import LepriconLogoWhite from "./assets/LepriconLogoWhite.png";
 import discord from "./assets/discord.png";
@@ -31,7 +30,7 @@ const styles = {
     justifyContent: "center",
     fontFamily: "Sora, sans-serif",
     color: "white",
-    marginTop: "130px",
+    marginTop: "100px",
     padding: "10px",
     marginBottom: "70px",
     overflow: "auto"
