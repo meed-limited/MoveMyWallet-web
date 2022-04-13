@@ -8,6 +8,7 @@ import Text from "antd/lib/typography/Text";
 import "antd/dist/antd.min.css";
 import HOME_BG from "./assets/HOME_BG.jpg";
 import MMW_Logo from "./assets/MMW_Logo.png";
+import newLogo from "./assets/newLogo.png";
 import LepriconLogoWhite from "./assets/LepriconLogoWhite.png";
 import discord from "./assets/discord.png";
 import telegram from "./assets/telegram.png";
@@ -56,7 +57,7 @@ const styles = {
   logo: {
     display: "flex",
     width: "20%",
-    margin: "30px 0 0 30px"
+    margin: "40px 0 0 30px"
   },
   button: {
     fontWeight: "600",
@@ -91,7 +92,7 @@ function App() {
         <Header style={styles.header}>
           <Link to='/'>
             <div style={styles.logo}>
-              <img src={MMW_Logo} alt='MMW_Logo' />
+              <img src={newLogo} alt='MMW_Logo' />
             </div>
           </Link>
           <ButtonItems />
