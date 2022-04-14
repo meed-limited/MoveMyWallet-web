@@ -1,3 +1,18 @@
 .ant-btn:hover {
     transform: scale(1.05) !important;
   }
+
+  @font-face {
+    font-family: 'LeonSans-Medium';
+    src: local('LeonSans-Medium'), url(./fonts/LeonSans/LeonSans-Medium.otf) format('truetype');
+  }
+
+  @font-face {
+    font-family: 'LeonSans-Bold';
+    src: local('LeonSans-Bold'), url(./fonts/LeonSans/LeonSans-Bold.otf) format('truetype');
+  }
+
+  @font-face {
+    font-family: 'LeonSans-Regular';
+    src: local('LeonSans-Regular'), url(./fonts/LeonSans/LeonSans-Regular.otf) format('truetype');
+  }

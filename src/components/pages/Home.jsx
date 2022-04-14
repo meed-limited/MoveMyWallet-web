@@ -3,79 +3,60 @@ import wallet from "../../assets/wallet.png";
 
 const Home = () => {
   const styles = {
-    body: {
-      display: "inline-flex",
-      width: "65%",
+    container: {
+      display: "flex",
+      flexDirection: "column",
+      width: "75%",
       height: "60vh",
-      marginBlock: "auto",
       alignItems: "center",
       justifyContent: "center",
-      fontFamily: "Sora, sans-serif",
-      color: "black"
+      fontFamily: "LeonSans-Medium",
+      color: "#2533c8"
     },
-    leftPane: {
-      flex: 1
+    horizontalGrid: {
+      display: "inline-flex",
+      width: "100%",
+      margin: "20px"
     },
-    leftText: {
-      lineHeight: "120px",
-      fontSize: "70px",
-      fontWeight: "500",
-      color: "white"
+    titleText: {
+      paddingTop: "45px",
+      fontSize: "45px"
+    },
+    smallerText: {
+      fontSize: "25px",
+      marginBlock: "auto"
     },
     button: {
       height: "60px",
-      fontWeight: "600",
       letterSpacing: "1px",
-      fontSize: "22px",
+      fontSize: "25px",
       border: "none",
-      marginBlock: "50px",
-      marginLeft: "20px",
       padding: "0 50px 0 50px",
       textAlign: "center",
-      background: "#806100",
+      background: "#2533c8",
       color: "white"
-    },
-    smallerText: {
-      fontStyle: "italic",
-      fontSize: "27px",
-      fontWeight: "350",
-      letterSpacing: "1px",
-      color: "white"
-    },
-    rightPane: {
-      display: "flex",
-      flexDirection: "column",
-      flex: 1,
-      alignItems: "center",
-      justifyContent: "center"
-    },
-    wallet: {
-      margin: "auto"
     }
   };
 
   return (
-    <>
-      <div style={styles.body}>
-        <div style={styles.leftPane}>
-          <div style={styles.leftText}>Move My Wallet</div>
+    <div style={styles.container}>
+      <div style={styles.horizontalGrid}>
+        <div style={styles.titleText}>Move my wallet</div>
+        <div style={{ margin: "auto" }}>
+          <img src={wallet} alt='wallet' width='400px' />
+        </div>
+      </div>
+      <div style={styles.horizontalGrid}>
+        <div style={styles.smallerText}>Easily transfer all assets from one wallet to another.</div>
+        <div style={{ margin: "auto" }}>
           <a href='https://app.movemywallet.com/' target='_blank' rel='noopener noreferrer'>
             <Button shape='round' size='large' style={styles.button}>
               Launch App
             </Button>
           </a>
-          <div style={styles.smallerText}>
-            Transfer all the assets from one wallet to another easily.
-          </div>
-        </div>
-
-        <div style={styles.rightPane}>
-          <div style={styles.wallet}>
-            <img src={wallet} alt='wallet' height='300px' width='300px' />
-          </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

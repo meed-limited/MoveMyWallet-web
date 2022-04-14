@@ -13,13 +13,12 @@ const styles = {
     borderBottom: "none"
   },
   button: {
-    fontSize: "17px",
-    height: "40px",
+    fontSize: "22px",
+    height: "50px",
     marginTop: "15px",
-    paddingTop: "7px",
     paddingInline: "25px",
-    background: "#2b31e9",
-    color: "white",
+    background: "transparent",
+    color: "black",
     border: "none"
   }
 };
@@ -37,7 +36,11 @@ function ButtonItems() {
           Docs/FAQ
         </Button>
       </a>
-      <a href='https://techdev2021.atlassian.net/servicedesk/customer/portal/3' target='_blank' rel='noopener noreferrer'>
+      <a
+        href='https://techdev2021.atlassian.net/servicedesk/customer/portal/3'
+        target='_blank'
+        rel='noopener noreferrer'
+      >
         <Button shape='round' size='large' style={styles.button}>
           Support
         </Button>
