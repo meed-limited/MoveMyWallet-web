@@ -11,7 +11,8 @@ const Home = () => {
       alignItems: "center",
       justifyContent: "center",
       fontFamily: "LeonSans-Medium",
-      color: "#2533c8"
+      color: "#2533c8",
+      paddingLeft: "100px"
     },
     horizontalGrid: {
       display: "inline-flex",
