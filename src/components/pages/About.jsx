@@ -7,7 +7,7 @@ const styles = {
     width: "75%",
     height: "inherit",
     fontSize: "17px",
-    color: "rgba(255, 255, 255,0.7)",
+    color: "rgba(255, 255, 255,0.9)",
     Bottom: "50px"
   },
   pane: {
