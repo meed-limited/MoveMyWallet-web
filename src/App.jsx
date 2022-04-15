@@ -24,7 +24,7 @@ const styles = {
   content: {
     display: "flex",
     justifyContent: "center",
-    fontFamily: "LeonSans-Medium",
+    fontFamily: "LeonSans-Medium, sans-serif",
     color: "white",
     marginTop: "100px",
     padding: "10px",
@@ -39,7 +39,7 @@ const styles = {
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    fontFamily: "LeonSans-Medium",
+    fontFamily: "LeonSans-Medium, sans-serif",
     padding: "0"
   },
   logo: {
