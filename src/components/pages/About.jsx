@@ -1,3 +1,4 @@
+/*eslint no-dupe-keys: "Off"*/
 import LepriconLogoWhite from "../../assets/LepriconLogoWhite.png";
 
 const styles = {

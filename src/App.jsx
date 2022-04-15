@@ -51,7 +51,6 @@ const styles = {
     width: "100%",
     overflow: "auto",
     position: "fixed",
-    width: "100%",
     bottom: "0",
     backgroundColor: "transparent"
   }
