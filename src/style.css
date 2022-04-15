@@ -4,15 +4,15 @@
 
   @font-face {
     font-family: 'LeonSans-Medium';
-    src: local('LeonSans-Medium'), url(./fonts/LeonSans/LeonSans-Medium.otf) format('truetype');
+    src: local('LeonSans-Medium'), url(./assets/fonts/LeonSans/LeonSans-Medium.otf) format('truetype');
   }
 
   @font-face {
     font-family: 'LeonSans-Bold';
-    src: local('LeonSans-Bold'), url(./fonts/LeonSans/LeonSans-Bold.otf) format('truetype');
+    src: local('LeonSans-Bold'), url(./assets/fonts/LeonSans/LeonSans-Bold.otf) format('truetype');
   }
 
   @font-face {
     font-family: 'LeonSans-Regular';
-    src: local('LeonSans-Regular'), url(./fonts/LeonSans/LeonSans-Regular.otf) format('truetype');
+    src: local('LeonSans-Regular'), url(./assets/fonts/LeonSans/LeonSans-Regular.otf) format('truetype');
   }
