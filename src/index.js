@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
-import './assets/fonts/LeonSans-Medium.otf';
+import './assets/fonts/LeonSans-Regular.otf';
 
 ReactDOM.render(
   <React.StrictMode>

@@ -19,17 +19,18 @@ const styles = {
     backgroundRepeat: "no-repeat",
     width: "100vw",
     height: "100vh",
-    overflow: "auto"
+    overflow: "auto",
+    
   },
   content: {
     display: "flex",
     justifyContent: "center",
-    fontFamily: "LeonSans-Medium, sans-serif",
     color: "white",
     marginTop: "100px",
     padding: "10px",
     marginBottom: "70px",
-    overflow: "auto"
+    overflow: "auto",
+    fontFamily: "LeonSans-Regular",
   },
   header: {
     position: "fixed",
@@ -39,8 +40,8 @@ const styles = {
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    fontFamily: "LeonSans-Medium, sans-serif",
-    padding: "0"
+    padding: "0",
+    fontFamily: "LeonSans-Regular",
   },
   logo: {
     display: "flex",
