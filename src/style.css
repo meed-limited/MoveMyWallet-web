@@ -1,13 +1,11 @@
 
-
-/* @font-face {
-  font-family: "LeonSans-Medium";
-  src: url(./assets/fonts/LeonSans-Medium.otf) format("otf");
-} */
-
 @font-face {
-  font-family: "LeonSans-Regular";
-  src: url(./assets/fonts/LeonSans-Regular.otf) format("otf");
+  font-family: 'leon_sansregular';
+  src: url('./assets/fonts/leonsans-regular-webfont.woff2') format('woff2'),
+       url('./assets/fonts/leonsans-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
 }
 
 .ant-btn:hover {

@@ -30,7 +30,7 @@ const styles = {
     padding: "10px",
     marginBottom: "70px",
     overflow: "auto",
-    fontFamily: "LeonSans-Regular",
+    fontFamily: "leon_sansregular",
   },
   header: {
     position: "fixed",
@@ -41,7 +41,7 @@ const styles = {
     justifyContent: "space-between",
     alignItems: "center",
     padding: "0",
-    fontFamily: "LeonSans-Regular",
+    fontFamily: "leon_sansregular",
   },
   logo: {
     display: "flex",
