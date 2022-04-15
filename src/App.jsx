@@ -20,7 +20,7 @@ const styles = {
     width: "100vw",
     height: "100vh",
     overflow: "auto",
-    
+    fontFamily: "leon_sansregular"
   },
   content: {
     display: "flex",
@@ -29,8 +29,7 @@ const styles = {
     marginTop: "100px",
     padding: "10px",
     marginBottom: "70px",
-    overflow: "auto",
-    fontFamily: "leon_sansregular",
+    overflow: "auto"
   },
   header: {
     position: "fixed",
@@ -40,8 +39,7 @@ const styles = {
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    padding: "0",
-    fontFamily: "leon_sansregular",
+    padding: "0"
   },
   logo: {
     display: "flex",
