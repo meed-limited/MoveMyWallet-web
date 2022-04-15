@@ -1,18 +1,18 @@
+@font-face {
+  font-family: 'LeonSans-Medium';
+  src: local('LeonSans-Medium'), url(./assets/fonts/LeonSans-Medium.otf) format('otf');
+}
+  
+@font-face {
+  font-family: 'LeonSans-Bold';
+  src: local('LeonSans-Bold'), url(./assets/fonts/LeonSans-Bold.otf) format('otf');
+}
+  
+@font-face {
+  font-family: 'LeonSans-Regular';
+  src: local('LeonSans-Regular'), url(./assets/fonts/LeonSans-Regular.otf) format('otf');
+}
+
 .ant-btn:hover {
-    transform: scale(1.05) !important;
-  }
-
-  @font-face {
-    font-family: 'LeonSans-Medium';
-    src: local('LeonSans-Medium'), url(./assets/fonts/LeonSans-Medium.otf) format('truetype');
-  }
-
-  @font-face {
-    font-family: 'LeonSans-Bold';
-    src: local('LeonSans-Bold'), url(./assets/fonts/LeonSans-Bold.otf) format('truetype');
-  }
-
-  @font-face {
-    font-family: 'LeonSans-Regular';
-    src: local('LeonSans-Regular'), url(./assets/fonts/LeonSans-Regular.otf) format('truetype');
-  }
+  transform: scale(1.05) !important;
+}
