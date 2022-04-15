@@ -10,7 +10,7 @@ const Home = () => {
       height: "60vh",
       alignItems: "center",
       justifyContent: "center",
-      fontFamily: "LeonSans-Medium",
+      fontFamily: "LeonSans-Medium, sans-serif !important",
       color: "#2533c8",
       paddingLeft: "100px"
     },
