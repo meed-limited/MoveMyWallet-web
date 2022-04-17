@@ -14,11 +14,11 @@ const styles = {
 const CommunityItems = () => {
   return (
     <>
-      <Text style={{ display: "flex", color: "white", float: "left" }}>
+      <Text style={{ display: "flex", color: "white", float: "left", alignItems: "end" }}>
         Powered by |
         <a href='https://lepricon.io/' target='_blank' rel='noopener noreferrer'>
           <div style={{ paddingLeft: "10px" }}>
-            <img src={LepriconLogoWhite} alt='LepriconLogoWhite' width='80px' height='22px' />
+            <img src={LepriconLogoWhite} alt='LepriconLogoWhite' width='80px' />
           </div>
         </a>
       </Text>

@@ -19,17 +19,16 @@ const styles = {
     backgroundRepeat: "no-repeat",
     width: "100vw",
     height: "100vh",
-    overflow: "auto",
     fontFamily: "leon_sansregular"
   },
   content: {
     display: "flex",
     justifyContent: "center",
-    color: "white",
     marginTop: "100px",
-    padding: "10px",
     marginBottom: "70px",
-    overflow: "auto"
+    padding: "10px",
+    overflow: "auto",
+    color: "white"
   },
   header: {
     position: "fixed",
@@ -47,9 +46,8 @@ const styles = {
     margin: "40px 0 0 30px"
   },
   footer: {
-    width: "100%",
-    overflow: "auto",
     position: "fixed",
+    width: "100%",
     bottom: "0",
     backgroundColor: "transparent"
   }

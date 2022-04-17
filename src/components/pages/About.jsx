@@ -29,11 +29,12 @@ const styles = {
 const About = () => {
   return (
     <div style={styles.content}>
+      s
       <div style={styles.pane}>
         <h2 style={styles.h2}>About MoveMyWallet</h2>
         <div style={styles.text}>
           <p>Do any of these apply to you?</p>
-          <p>
+          <div>
             <ul>
               <li>
                 Are you divorcing your spouse, and you need to quickly move all your crypto to a wallet address they
@@ -46,7 +47,7 @@ const About = () => {
                 better way than spending the time sending assets one at a time?
               </li>
             </ul>
-          </p>
+          </div>
           <p>
             If any of the above apply to you, MoveMyWallet is the super simple dApp that solves all your problems.
             Connect the source wallet, choose all or some of your tokens, then choose all or some of your NFTs, pack
@@ -57,7 +58,6 @@ const About = () => {
           <p>It’s great for moving multiple NFTs from one wallet to another in just a few clicks.</p>
         </div>
       </div>
-
       <div style={{ ...styles.pane, marginTop: "40px" }}>
         <h2 style={styles.h2}>Built by Lepricon</h2>
         <div style={styles.text}>
@@ -65,7 +65,9 @@ const About = () => {
           We’ve had to pack up a few digital assets ourselves developing technology to use in our games and MoveMyWallet
           is a cool tool that came out of that research.
           <div style={{ padding: "30px", textAlign: "center" }}>
-            <img src={LepriconLogoWhite} alt='LepriconLogoWhite' height='50px' />
+            <a href='https://lepricon.io/' target='_blank' rel='noopener noreferrer'>
+              <img src={LepriconLogoWhite} alt='LepriconLogoWhite' height='50px' />
+            </a>
           </div>
           <div style={{ fontSize: "14px" }}>
             <i>* Please note - the above examples are for humorous purposes only</i>
