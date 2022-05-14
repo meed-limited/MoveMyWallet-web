@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import ReactGA from "react-ga";
 import ButtonItems from "./components/ButtonItems";
@@ -9,6 +10,7 @@ import "antd/dist/antd.min.css";
 import HOME_BG from "./assets/HOME_BG.png";
 import MMW_Logo from "./assets/MMW_Logo.png";
 import "./style.css";
+import NoMobile from "./components/NoMobile";
 
 const { Header, Footer } = Layout;
 
@@ -57,28 +59,46 @@ const styles = {
 function App() {
   const TRACKING_ID = process.env.REACT_APP_GOOGLE_ANALYTICS;
   ReactGA.initialize(TRACKING_ID);
+  const [width, setWidth] = useState(window.innerWidth);
+
+  const handleWindowSizeChange = () => {
+    setWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleWindowSizeChange);
+    return () => {
+      window.removeEventListener("resize", handleWindowSizeChange);
+    };
+  }, []);
+
+  const isMobile = width <= 768;
+
   return (
     <Layout style={styles.layout}>
-      <Router>
-        <Header style={styles.header}>
-          <Link to='/'>
-            <div style={styles.logo}>
-              <img src={MMW_Logo} alt='MMW_Logo' />
-            </div>
-          </Link>
-          <ButtonItems />
-        </Header>
-        <div style={styles.content}>
-          <Routes>
-            <Route exact path='/about' element={<About />} />
-            <Route path='/' element={<Home />} />
-            <Route path='*' element={<Home />} />
-          </Routes>
-        </div>
-        <Footer style={styles.footer}>
-          <CommunityItems />
-        </Footer>
-      </Router>
+      {isMobile && <NoMobile />}
+      {!isMobile && (
+        <Router>
+          <Header style={styles.header}>
+            <Link to='/'>
+              <div style={styles.logo}>
+                <img src={MMW_Logo} alt='MMW_Logo' />
+              </div>
+            </Link>
+            <ButtonItems />
+          </Header>
+          <div style={styles.content}>
+            <Routes>
+              <Route exact path='/about' element={<About />} />
+              <Route path='/' element={<Home />} />
+              <Route path='*' element={<Home />} />
+            </Routes>
+          </div>
+          <Footer style={styles.footer}>
+            <CommunityItems />
+          </Footer>
+        </Router>
+      )}
     </Layout>
   );
 }
