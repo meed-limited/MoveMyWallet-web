@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-// import ReactGA from "react-ga";
 import ButtonItems from "./components/ButtonItems";
 import Home from "./components/pages/Home";
 import About from "./components/pages/About";
@@ -57,8 +56,6 @@ const styles = {
 };
 
 function App() {
-  // const TRACKING_ID = process.env.REACT_APP_GOOGLE_ANALYTICS;
-  // ReactGA.initialize(TRACKING_ID);
   const [width, setWidth] = useState(window.innerWidth);
 
   const handleWindowSizeChange = () => {

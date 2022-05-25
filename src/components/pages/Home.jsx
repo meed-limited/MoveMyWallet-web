@@ -34,7 +34,8 @@ const Home = () => {
       padding: "0 50px 0 50px",
       textAlign: "center",
       background: "#2533c8",
-      color: "white"
+      color: "white",
+      boxShadow: "0 1px 10px rgb(2 2 2 / 60%)"
     }
   };
 

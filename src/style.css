@@ -8,3 +8,13 @@
 .ant-btn:hover {
   transform: scale(1.05) !important;
 }
+
+a {
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  color: orange
+}
+
+a:hover {
+  color: rgb(235, 199, 39)
+}

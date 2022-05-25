@@ -33,29 +33,26 @@ const About = () => {
       <div style={styles.pane}>
         <h2 style={styles.h2}>About MoveMyWallet</h2>
         <div style={styles.text}>
-          <p>Do any of these apply to you?</p>
+          <p>Transfer all the assets from one wallet to another easily</p>
           <div>
+            Moving digital assets from one wallet to another has never been easier. Now you can:
             <ul>
-              <li>
-                Are you divorcing your spouse, and you need to quickly move all your crypto to a wallet address they
-                don’t know?
-              </li>
-              <li>Are you trying to hide from the IRS?</li>
-              <li>Did you steal Mexican Cartel money, and you need to move it quickly?</li>
-              <li>
-                Or do you just need an easy way to move some crypto and NFTs from one wallet to another and want a
-                better way than spending the time sending assets one at a time?
-              </li>
+              <li>Move more than one cryptocurrency</li>
+              <li>Move all your NFTs</li>
+              <li>Move without multiple transactions, gas spend and time hassle</li>
             </ul>
           </div>
           <p>
-            If any of the above apply to you, MoveMyWallet is the super simple dApp that solves all your problems.
-            Connect the source wallet, choose all or some of your tokens, then choose all or some of your NFTs, pack
-            them up into a single composed NFT, then send that NFT to the destination wallet, where all the assets will
-            unpack automatically. It’s quick, easy, and on Ethereum, it will save you a ton of gas fees!
+            MoveMyWallet is currently in beta and has an open-source code that’s available on{" "}
+            <a href='https://github.com/shamrockstudios/MoveMyWallet-app' target='_blank' rel='noopener noreferrer'>
+              Github
+            </a>
+            .
           </p>
-
-          <p>It’s great for moving multiple NFTs from one wallet to another in just a few clicks.</p>
+          <br></br>
+          <p>
+            Move multiple NFTs and cryptocurrencies from one wallet to another in just a few clicks (and less gas!).
+          </p>
         </div>
       </div>
       <div style={{ ...styles.pane, marginTop: "40px" }}>
@@ -68,9 +65,6 @@ const About = () => {
             <a href='https://lepricon.io/' target='_blank' rel='noopener noreferrer'>
               <img src={LepriconLogoWhite} alt='LepriconLogoWhite' height='50px' />
             </a>
-          </div>
-          <div style={{ fontSize: "14px" }}>
-            <i>* Please note - the above examples are for humorous purposes only</i>
           </div>
         </div>
       </div>
