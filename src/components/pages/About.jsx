@@ -42,6 +42,7 @@ const About = () => {
               <li>Move without multiple transactions, gas spend and time hassle</li>
             </ul>
           </div>
+          <br></br>
           <p>
             MoveMyWallet is currently in beta and has an open-source code that’s available on{" "}
             <a href='https://github.com/shamrockstudios/MoveMyWallet-app' target='_blank' rel='noopener noreferrer'>
@@ -49,7 +50,6 @@ const About = () => {
             </a>
             .
           </p>
-          <br></br>
           <p>
             Move multiple NFTs and cryptocurrencies from one wallet to another in just a few clicks (and less gas!).
           </p>
