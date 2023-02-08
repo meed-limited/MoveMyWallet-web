@@ -1,103 +1,43 @@
-import { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import ButtonItems from "./components/ButtonItems";
-import Home from "./components/pages/Home";
-import About from "./components/pages/About";
-import CommunityItems from "./components/CommunityItems";
+
 import { Layout } from "antd";
-import "antd/dist/antd.min.css";
-import HOME_BG from "./assets/HOME_BG.png";
+
+import { Home, About } from "./pages";
+import { CommunityItems, MenuItems } from "./components";
+import { useWindowWidthAndHeight } from "./hooks/useWindowWidthAndHeight";
+import "./styles/app.css";
 import MMW_Logo from "./assets/MMW_Logo.png";
-import "./style.css";
-import NoMobile from "./components/NoMobile";
+import MMW_Logo_small from "./assets/android-chrome-192x192.png";
 
 const { Header, Footer } = Layout;
 
-const styles = {
-  layout: {
-    backgroundImage: `url(${HOME_BG})`,
-    backgroundPosition: "center",
-    backgroundSize: "cover",
-    backgroundRepeat: "no-repeat",
-    width: "100vw",
-    height: "100vh",
-    fontFamily: "leon_sansregular"
-  },
-  content: {
-    display: "flex",
-    justifyContent: "center",
-    marginTop: "100px",
-    marginBottom: "70px",
-    padding: "10px",
-    overflow: "auto",
-    color: "white"
-  },
-  header: {
-    position: "fixed",
-    zIndex: 1,
-    width: "100%",
-    background: "transparent",
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    padding: "0"
-  },
-  logo: {
-    display: "flex",
-    width: "20%",
-    margin: "40px 0 0 30px"
-  },
-  footer: {
-    position: "fixed",
-    width: "100%",
-    bottom: "0",
-    backgroundColor: "transparent"
-  }
-};
-
 function App() {
-  const [width, setWidth] = useState(window.innerWidth);
+    const { isMobileOnly } = useWindowWidthAndHeight();
 
-  const handleWindowSizeChange = () => {
-    setWidth(window.innerWidth);
-  };
-
-  useEffect(() => {
-    window.addEventListener("resize", handleWindowSizeChange);
-    return () => {
-      window.removeEventListener("resize", handleWindowSizeChange);
-    };
-  }, []);
-
-  const isMobile = width <= 768;
-
-  return (
-    <Layout style={styles.layout}>
-      {isMobile && <NoMobile />}
-      {!isMobile && (
-        <Router>
-          <Header style={styles.header}>
-            <Link to='/'>
-              <div style={styles.logo}>
-                <img src={MMW_Logo} alt='MMW_Logo' />
-              </div>
-            </Link>
-            <ButtonItems />
-          </Header>
-          <div style={styles.content}>
-            <Routes>
-              <Route exact path='/about' element={<About />} />
-              <Route path='/' element={<Home />} />
-              <Route path='*' element={<Home />} />
-            </Routes>
-          </div>
-          <Footer style={styles.footer}>
-            <CommunityItems />
-          </Footer>
-        </Router>
-      )}
-    </Layout>
-  );
+    return (
+        <Layout className="layout">
+            <Router>
+                <Header className="header">
+                    <Link to="/">
+                        <img src={isMobileOnly ? MMW_Logo_small : MMW_Logo} alt="MMW_Logo" className="logo" />
+                    </Link>
+                    <div className="header-right">
+                        <MenuItems />
+                    </div>
+                </Header>
+                <div className="content">
+                    <Routes>
+                        <Route exact path="/about" element={<About />} />
+                        <Route path="/" element={<Home />} />
+                        <Route path="*" element={<Home />} />
+                    </Routes>
+                </div>
+                <Footer className="footer">
+                    <CommunityItems />
+                </Footer>
+            </Router>
+        </Layout>
+    );
 }
 
 export default App;

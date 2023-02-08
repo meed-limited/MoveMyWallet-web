@@ -1,61 +1,67 @@
 import Text from "antd/lib/typography/Text";
-import { FacebookOutlined, LinkedinOutlined, TwitterOutlined, GithubOutlined } from "@ant-design/icons";
-import LepriconLogoWhite from "../assets/LepriconLogoWhite.png";
-import discord from "../assets/discord.png";
-import telegram from "../assets/telegram.png";
-
-const styles = {
-  antdIcon: {
-    fontSize: "25px",
-    color: "black"
-  }
-};
+import {
+    YoutubeOutlined,
+    LinkedinOutlined,
+    TwitterOutlined,
+    GithubOutlined,
+    InstagramOutlined,
+} from "@ant-design/icons";
+import logo_superultra from "../assets/logo_superultra.png";
+import { useWindowWidthAndHeight } from "../hooks/useWindowWidthAndHeight";
 
 const CommunityItems = () => {
-  return (
-    <>
-      <Text style={{ display: "flex", color: "white", float: "left", alignItems: "end" }}>
-        Powered by |
-        <a href='https://lepricon.io/' target='_blank' rel='noopener noreferrer'>
-          <div style={{ paddingLeft: "10px" }}>
-            <img src={LepriconLogoWhite} alt='LepriconLogoWhite' width='80px' />
-          </div>
-        </a>
-      </Text>
-      <Text style={{ display: "flex", color: "black", fontWeight: "500", float: "right" }}>
-        <a href='https://twitter.com/lepriconio' target='_blank' rel='noopener noreferrer'>
-          <div style={{ padding: "0 10px 0 15px" }}>
-            <TwitterOutlined style={styles.antdIcon} />
-          </div>
-        </a>
-        <a href='http://discord.gg/lepricon' target='_blank' rel='noopener noreferrer'>
-          <div style={{ padding: "0 10px" }}>
-            <img src={discord} alt='discord' height='25px' />
-          </div>
-        </a>
-        <a href='https://t.me/lepriconio' target='_blank' rel='noopener noreferrer'>
-          <div style={{ padding: "0 10px" }}>
-            <img src={telegram} alt='telegram' height='25px' />
-          </div>
-        </a>
-        <a href='https://www.facebook.com/lepriconio' target='_blank' rel='noopener noreferrer'>
-          <div style={{ padding: "0 10px" }}>
-            <FacebookOutlined style={styles.antdIcon} />
-          </div>
-        </a>
-        <a href='https://sc.linkedin.com/company/lepricon-io' target='_blank' rel='noopener noreferrer'>
-          <div style={{ padding: "0 10px" }}>
-            <LinkedinOutlined style={styles.antdIcon} />
-          </div>
-        </a>
-        <a href='https://github.com/shamrockstudios/MoveMyWallet-app' target='_blank' rel='noopener noreferrer'>
-          <div style={{ padding: "0 10px" }}>
-            <GithubOutlined style={styles.antdIcon} />
-          </div>
-        </a>
-      </Text>
-    </>
-  );
+    const { isMobileOnly } = useWindowWidthAndHeight();
+
+    const socialLinks = {
+        website: "https://www.superultra.io/",
+        twitter: "https://twitter.com/superultraio",
+        youtube: "https://www.youtube.com/channel/UCnitnTrLQ_LXLtKO2Zn3THQ",
+        instagram: "https://www.instagram.com/superultra.io/",
+        linkedin: "https://www.linkedin.com/company/superultraio/",
+        github: "https://github.com/superultra-io/MoveMyWallet-app",
+    };
+
+    return (
+        <>
+            <Text className="poweredBy">
+                <>
+                    {!isMobileOnly && <span>Powered by | </span>}
+                    <a href={socialLinks.website} target="_blank" rel="noopener noreferrer">
+                        <div style={{ paddingLeft: "10px" }}>
+                            <img src={logo_superultra} alt="logo_superultra" width="80px" />
+                        </div>
+                    </a>
+                </>
+            </Text>
+            <Text className="community-items">
+                <a href={socialLinks.twitter} target="_blank" rel="noopener noreferrer">
+                    <div className="custom-icon-div">
+                        <TwitterOutlined className="ant-icons" />
+                    </div>
+                </a>
+                <a href={socialLinks.youtube} target="_blank" rel="noopener noreferrer">
+                    <div className="custom-icon-div">
+                        <YoutubeOutlined className="ant-icons" />
+                    </div>
+                </a>
+                <a href={socialLinks.instagram} target="_blank" rel="noopener noreferrer">
+                    <div className="icon-div">
+                        <InstagramOutlined className="ant-icons" />
+                    </div>
+                </a>
+                <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer">
+                    <div className="icon-div">
+                        <LinkedinOutlined className="ant-icons" />
+                    </div>
+                </a>
+                <a href={socialLinks.github} target="_blank" rel="noopener noreferrer">
+                    <div className="icon-div">
+                        <GithubOutlined className="ant-icons" />
+                    </div>
+                </a>
+            </Text>
+        </>
+    );
 };
 
 export default CommunityItems;

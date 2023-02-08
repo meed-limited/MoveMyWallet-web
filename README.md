@@ -1,3 +1,3 @@
 # `Move My Wallet`
 
-> MoveMyWallet website, provided by Lepricon.
+> MoveMyWallet website, provided by SuperUltra.
