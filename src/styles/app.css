@@ -177,6 +177,9 @@ h2 {
     color: white;
     box-shadow: 0 1px 10px rgb(2 2 2 / 60%);
 }
+.button:hover {
+    color: white !important;
+}
 
 /* ABOUT PAGE: 
 ****************/
@@ -241,6 +244,9 @@ h2 {
     color: black;
     border: none;
 }
+.menu-buttons:hover {
+    color: black !important;
+}
 
 @media (width < 900px) {
     .menu {
@@ -288,6 +294,5 @@ h2 {
 /* Ant override: */
 
 .ant-btn:hover {
-    color: white !important;
     transform: scale(1.05) !important;
 }
